@@ -1,4 +1,16 @@
 const siteContent = {
+  
+  let aTags = document.querySelectorAll('a')
+  Nav[0].textContent = 'Services';
+  Nav[1].textContent = 'Products';
+  Nav[2].textContent = 'Vision';
+  Nav[3].textContent = 'Features';
+  Nav[4].textContent = 'About';
+  Nav[5].textContent = 'Contact';
+
+
+  
+  
   "nav": {
     "nav-item-1": "Services",
     "nav-item-2": "Product",
