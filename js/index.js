@@ -1,13 +1,6 @@
 const siteContent = {
-  
-  let aTags = document.querySelectorAll('a')
-  Nav[0].textContent = 'Services';
-  Nav[1].textContent = 'Products';
-  Nav[2].textContent = 'Vision';
-  Nav[3].textContent = 'Features';
-  Nav[4].textContent = 'About';
-  Nav[5].textContent = 'Contact';
 
+//a tags - navigation//
 
   
   
@@ -20,6 +13,8 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+
+  //
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
@@ -52,3 +47,31 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let imgsrc = document.getElementById ("cta-img");
+let aTags = document.querySelectorAll('a')
+
+//Navigation//
+
+let a = document.createElement("a");
+a.textContent =siteContent["nav"]["nav-item-1"];
+let header = document.querySelector("nav");
+header.prepend(a);
+
+let b = document.createElement("a");
+let secondA = document.querySelector("nav a:nth-child(2)");
+b.textContent =siteContent["nav"]["nav-item-2"];
+secondA.prepend(b);
+
+let c = document.createElement("a");
+let secondB = document.querySelector("nav a:nth-child(3)");
+c.textContent =siteContent["nav"]["nav-item-3"];
+secondB.prepend(c); 
+
+
+
+
+let nav = document.querySelectorAll("a");
+nav.forEach(function(element){
+  element.style.color="green";
+})
+
