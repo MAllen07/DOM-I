@@ -47,31 +47,56 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-let imgsrc = document.getElementById ("cta-img");
-let aTags = document.querySelectorAll('a')
+
+
+
 
 //Navigation//
-
-let a = document.createElement("a");
-a.textContent =siteContent["nav"]["nav-item-1"];
-let header = document.querySelector("nav");
-header.prepend(a);
-
-let b = document.createElement("a");
-let secondA = document.querySelector("nav a:nth-child(2)");
-b.textContent =siteContent["nav"]["nav-item-2"];
-secondA.prepend(b);
-
-let c = document.createElement("a");
-let secondB = document.querySelector("nav a:nth-child(3)");
-c.textContent =siteContent["nav"]["nav-item-3"];
-secondB.prepend(c); 
+let selectedNavLinks = document.querySelectorAll("nav a");
+selectedNavLinks.forEach((link, i) => {
+  link.textContent = siteContent.nav[`nav-item-${i+1}`];
+})
 
 
 
+//navigation color set//
 
-let nav = document.querySelectorAll("a");
+let nav = document.querySelectorAll("nav a");
 nav.forEach(function(element){
   element.style.color="green";
 })
+
+//CTA 
+
+let ctaText = document.getElementsByClassName("cta-text")[0];
+
+ctaText.getElementsByTagName("h1")[0].textContent = siteContent["cta"]["h1"];
+ctaText.getElementsByTagName("button")[0].textContent = siteContent["cta"]["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+//Content
+
+let textContentList = document.querySelectorAll(".text-content");
+
+textContentList[0].getElementsByTagName("h4")[0].textContent = siteContent["main-content"]["features-h4"];
+textContentList[0].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["features-content"];
+textContentList[1].getElementsByTagName("h4")[0].textContent = siteContent["main-content"]["about-h4"];
+textContentList[1].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["about-content"];
+textContentList[2].getElementsByTagName("h4")[0].textContent = siteContent["main-content"]["services-h4"];
+textContentList[2].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["services-content"];
+textContentList[3].getElementsByTagName("h4")[0].textContent = siteContent["main-content"]["product-h4"];
+textContentList[3].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["product-content"];
+textContentList[4].getElementsByTagName("h4")[0].textContent = siteContent["main-content"]["vision-h4"];
+textContentList[4].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["vision-content"];
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+
+
+
+
 
