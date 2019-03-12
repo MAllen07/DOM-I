@@ -68,17 +68,17 @@ nav.forEach(function(element){
 
 //CTA 
 
-let ctaText = document.getElementsByClassName("cta-text")[0];
+const ctaText = document.getElementsByClassName("cta-text")[0];
 
 ctaText.getElementsByTagName("h1")[0].textContent = siteContent["cta"]["h1"];
 ctaText.getElementsByTagName("button")[0].textContent = siteContent["cta"]["button"];
 
-let ctaImg = document.getElementById("cta-img");
+const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 //Content
 
-let textContentList = document.querySelectorAll(".text-content");
+const textContentList = document.querySelectorAll(".text-content");
 
 textContentList[0].getElementsByTagName("h4")[0].textContent = siteContent["main-content"]["features-h4"];
 textContentList[0].getElementsByTagName("p")[0].textContent = siteContent["main-content"]["features-content"];
@@ -96,7 +96,15 @@ middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
 
+// contact information 
+
+const contact = document.getElementsByClassName("contact")[0];
+contact.getElementsByTagName("h4")[0].textContent = siteContent["contact"]["contact-h4"]
+contact.getElementsByTagName("p")[0].textContent = siteContent["contact"]["address"]
+contact.getElementsByTagName("p")[1].textContent = siteContent["contact"]["phone"]
+contact.getElementsByTagName("p")[2].textContent = siteContent["contact"]["email"]
 
 
-
-
+// footer
+const footer = document.querySelector("footer");
+footer.getElementsByTagName("p")[0].textContent = siteContent["footer"]["copyright"];
